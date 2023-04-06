@@ -1,8 +1,21 @@
-plugins {
+buildscript {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.7.10'
+    }
+}
+/*plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.10'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-}
+}*/
+apply plugin : 'java'
+apply plugin : 'org.springframework.boot'
+apply plugin : 'io.spring.dependency-management'
 
 group = 'com.atguigu'
 version = '0.0.1-SNAPSHOT'
